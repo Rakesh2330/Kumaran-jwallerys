@@ -1374,9 +1374,10 @@ em {
 
 /* ── FOOTER ── */
 .footer {
-  background-color: var(--color-darker);
-  color: var(--color-light);
+  background-color: #fdfbf7;
+  color: var(--color-text);
   padding-top: 5rem;
+  border-top: 1px solid var(--color-gray);
 }
 
 .footer-top {
@@ -1398,7 +1399,7 @@ em {
 }
 
 .footer-brand p {
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   max-width: 300px;
@@ -1412,7 +1413,8 @@ em {
 .social-link {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: var(--color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1422,8 +1424,10 @@ em {
 
 .social-link:hover {
   background-color: var(--color-gold);
-  color: var(--color-dark);
+  color: #fff;
   border-color: var(--color-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
 }
 
 .footer-links h5 {
@@ -1436,7 +1440,7 @@ em {
 
 .footer-links a {
   display: block;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 0.8rem;
   transition: var(--transition-fast);
@@ -1450,9 +1454,9 @@ em {
 .footer-bottom {
   text-align: center;
   padding: 2rem 5%;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(0,0,0,0.05);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--color-text-muted);
   display: flex;
   justify-content: space-between;
   align-items: center;
