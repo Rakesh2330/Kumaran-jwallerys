@@ -264,10 +264,10 @@ em {
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   white-space: nowrap;
 }
 
@@ -1698,9 +1698,9 @@ em {
 }
 
 /* ── MEDIA QUERIES ── */
-@media (max-width: 1024px) {
-  .section {
-    padding: 5rem 5%;
+@media (max-width: 1100px) {
+  .nav-container {
+    padding: 0 3%;
   }
 
   .nav-links {
@@ -1740,8 +1740,17 @@ em {
     display: none;
   }
   
+  .brand-name {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    letter-spacing: 1px;
+  }
+
+  .section {
+    padding: 5rem 5%;
+  }
+  
   .hero-title {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
   .collection-grid {
@@ -1752,12 +1761,14 @@ em {
   .featured-grid {
     gap: 2rem;
     align-items: start;
+    grid-template-columns: 1fr;
   }
 
   .featured-badge {
     padding: 1rem;
     font-size: 1.2rem;
-    right: -1rem;
+    right: 1rem;
+    bottom: -1rem;
   }
 
   .about-grid {
