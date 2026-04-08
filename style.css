@@ -1194,50 +1194,83 @@ em {
 /* ── CONTACT ── */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
 .contact-card {
   background-color: #fcfbf9;
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   border: 1px solid var(--color-gray);
-  text-align: center;
+  border-radius: 8px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+    "icon title"
+    "icon text";
+  column-gap: 1.5rem;
+  align-items: center;
+  transition: var(--transition-normal);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold);
 }
 
 .contact-icon {
+  grid-area: icon;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  color: var(--color-gold);
 }
 
 .contact-card h4 {
+  grid-area: title;
   font-family: var(--font-body);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  align-self: end;
 }
 
 .contact-card p, .contact-card a {
-  font-size: 0.9rem;
+  grid-area: text;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
+  line-height: 1.6;
+  align-self: start;
 }
 
 .contact-form {
   background-color: #fff;
   padding: 3rem;
   border: 1px solid var(--color-gray);
+  border-radius: 8px;
   box-shadow: var(--shadow-sm);
 }
 
 .contact-form h3 {
   font-family: var(--font-heading);
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-dark);
 }
 
 .form-group {
@@ -1249,9 +1282,10 @@ em {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border: 1px solid var(--color-gray);
-  background: transparent;
+  border-radius: 6px;
+  background: #fcfbf9;
   font-family: var(--font-body);
   font-size: 1rem;
   outline: none;
@@ -1262,27 +1296,32 @@ em {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--color-gold);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
 .form-group label {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
   pointer-events: none;
   transition: var(--transition-fast);
-  background-color: #fff;
-  padding: 0 0.5rem;
+  background-color: transparent;
+  padding: 0 0.2rem;
 }
 
 .form-group input:focus ~ label,
 .form-group input:not(:placeholder-shown) ~ label,
 .form-group textarea:focus ~ label,
 .form-group textarea:not(:placeholder-shown) ~ label {
-  top: -0.5rem;
+  top: -0.6rem;
+  left: 0.8rem;
   font-size: 0.75rem;
-  color: var(--color-gold);
+  color: var(--color-gold-dark);
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .form-group input::placeholder,
@@ -1298,6 +1337,7 @@ em {
   margin-top: 1.5rem;
   text-align: center;
   border: 1px solid var(--color-success);
+  border-radius: 6px;
 }
 
 /* ── FOOTER ── */
