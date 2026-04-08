@@ -1622,21 +1622,50 @@ em {
 
 /* ── MEDIA QUERIES ── */
 @media (max-width: 1024px) {
+  .section {
+    padding: 5rem 5%;
+  }
+
   .nav-links {
     gap: 1.5rem;
   }
   
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem 1.5rem;
+  }
+  
   .featured-grid {
     gap: 2rem;
+    align-items: start;
+  }
+
+  .featured-badge {
+    padding: 1rem;
+    font-size: 1.2rem;
+    right: -1rem;
   }
 
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .footer-top {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 
