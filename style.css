@@ -1375,10 +1375,10 @@ em {
 
 /* ── FOOTER ── */
 .footer {
-  background-color: #fdfbf7;
-  color: var(--color-text);
+  background-color: #dfcdb9;
+  color: #3a2e24;
   padding-top: 5rem;
-  border-top: 1px solid var(--color-gray);
+  border-top: none;
 }
 
 .footer-top {
@@ -1394,13 +1394,13 @@ em {
 .footer-logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--color-gold);
+  color: #1a120c;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
 
 .footer-brand p {
-  color: var(--color-text-muted);
+  color: #4a3e35;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   max-width: 300px;
@@ -1414,8 +1414,8 @@ em {
 .social-link {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0,0,0,0.1);
-  color: var(--color-dark);
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #1a120c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1433,16 +1433,16 @@ em {
 
 .footer-links h5 {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: var(--color-gold);
+  color: #1a120c;
 }
 
 .footer-links a {
   display: block;
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
+  color: #4a3e35;
+  font-size: 0.95rem;
   margin-bottom: 0.8rem;
   transition: var(--transition-fast);
 }
@@ -1455,9 +1455,9 @@ em {
 .footer-bottom {
   text-align: center;
   padding: 2rem 5%;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.85rem;
+  color: #4a3e35;
   display: flex;
   justify-content: space-between;
   align-items: center;
